@@ -14,6 +14,15 @@ from django.http import HttpResponse
 
 def index(request):
 
-    return HttpResponse('OK')
+    # return HttpResponse('OK')
 
+    """
+    request, template_name, context=None
+    :param request:
+    :return:
+    """
+    context = {
+        "name": "請点击"
+    }
+    return render(request, 'book/index.html', context=context)
 
